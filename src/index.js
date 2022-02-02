@@ -54,7 +54,7 @@ function decode(encode) {
       }
     }
     for (let m = 0; m < encodeNewArr.length; m++) {
-      filteredArr.push(encodeNewArr[m].replaceAll('10', '.').replaceAll('11', '-').replaceAll('0', ''));
+      filteredArr.push(encodeNewArr[m].replace(/10/g, '.').replace(/11/g, '-').replace(/0/g, ''));
     }
     console.log(filteredArr);
     for (let p = 0; p < filteredArr.length; p++) {
